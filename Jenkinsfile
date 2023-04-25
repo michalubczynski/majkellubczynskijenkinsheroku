@@ -14,12 +14,12 @@ pipeline {
         }
         stage('Test'){
             steps{
-                sg "mvn test"
+                sh "mvn test"
             }
         }
         stage('Deploy'){
             steps{
-                sg "mvn heroku:deploy"
+                sh "mvn heroku:deploy"
             }
         }
     }
